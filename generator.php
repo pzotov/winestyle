@@ -32,7 +32,7 @@ if(file_exists('images/'.$image)){
 		}
 		$im2 = imagecreatetruecolor($w, $h);
 		imagecopyresampled($im2, $im1, 0, 0, 0, 0, $w, $h, $imsize[0], $imsize[1]);
-		imagejpeg($im2, $cache_file, 90);//максимальное качество, хотя
+		imagejpeg($im2, $cache_file, 100);//максимальное качество по заданию, хотя достаточно и 90
 		imagedestroy($im1);
 		imagedestroy($im2);
 	}
